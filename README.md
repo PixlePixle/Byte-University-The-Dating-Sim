@@ -1,1 +1,1 @@
-# Byte-University-The-Dating-Sim
+# Byte University: The Dating Sim
