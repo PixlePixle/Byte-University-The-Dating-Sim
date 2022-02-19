@@ -310,7 +310,7 @@ function chosen(a) {
             break;
         }
         choices = choices2;
-    } else if (choicesMade > 2) {
+    } else if (choicesMade == 1) {
         switch(a) {
             case 1:
             document.getElementById("SpriteLeft").style.filter = "blur(0px)";
@@ -338,7 +338,7 @@ function chosen(a) {
             break;
         }
         choices = choices3;
-    } else if (choicesMade > 3) {
+    } else if (choicesMade == 2) {
         switch(a) {
             case 1:
             document.getElementById("SpriteLeft").style.filter = "blur(0px)";
