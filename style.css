@@ -50,9 +50,14 @@ body {
     max-width: 80%;
     min-width: 80%;
     transform: translate(-50%, -50%);
+
 }
 
-.OptionsWrapper .Options button { /* Button Group for Options */
+.OptionsWrapper #Options {
+    display: none;
+}
+
+.OptionsWrapper #Options button { /* Button Group for Options */
     margin: auto;
     margin-bottom: 2vh;
     width: 33vw;
@@ -61,7 +66,8 @@ body {
     padding: 10px;
     display: block; 
     opacity: 60%;
-    /* display: none; */
+    transition: 1s;
+
 }
 
 .BottomBox {
