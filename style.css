@@ -58,7 +58,7 @@ body {
     border: 3px solid rgb(207, 170, 89);
     padding: 10px;
     display: block; 
-    display: none;
+    /* display: none; */
 }
 
 .BottomBox {
