@@ -9,7 +9,11 @@ html {
     -o-background-size: cover;
 
     box-sizing: border-box;
+
+    
 }
+
+
 
 body {
     position: relative;
@@ -26,6 +30,7 @@ body {
     max-width: 40vw;
     min-width: 50vh;
     height: auto;
+    transition: 0.1s;
 }
 
 .Sprites #SpriteLeft {
@@ -53,21 +58,32 @@ body {
 
 }
 
-.OptionsWrapper #Options {
-    
-}
-
 .OptionsWrapper #Options button { /* Button Group for Options */
     margin: auto;
     margin-bottom: 2vh;
-    width: 33vw;
+    min-width: 33vw;
     height: auto;
-    border: 3px solid rgb(207, 170, 89);
-    padding: 10px;
+    border: 3px solid rgb(97, 89, 126);
+    background-color: rgb(204, 196, 233);
+    
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
     display: block; 
     opacity: 60%;
-    transition: 1s;
+    transition: 0.5s;
     display: none;
+}
+
+.OptionsWrapper #Options button:hover {
+    background-color: rgb(151, 138, 190);
+    transition: 0.5s;
+}
+
+.OptionsWrapper #Options button:active {
+    background-color: rgb(97, 82, 151);
+    transition: 0s;
 }
 
 .BottomBox {
@@ -81,6 +97,7 @@ body {
 
     overflow-wrap: break-word;
     hyphens: auto;
+    
 }
 
 .BottomBox button {
@@ -92,6 +109,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
 
     border-width: 1em;
     border-color: rgb(97, 89, 126);

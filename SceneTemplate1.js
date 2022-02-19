@@ -12,7 +12,7 @@ const txtArray = ["e2You crack your eyes open to a gentle sunrise filtering thro
 "e1<i>Argh, what time is it?</i> you wonder to yourself. You roll over and click your alarm off. The time reads 7:57 am.",
 "t3…", 
 "t3OH CRAP!", 
-"t4You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door."];
+"t1You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door."];
 txt = txtArray[0];
 
 var choiceNumber = 0;
@@ -164,6 +164,8 @@ function stopAnimation() {
 }
 
 function makeChoice() {
+    document.getElementById("SpriteLeft").style.filter = "blur(8px)";
+    document.getElementById("SpriteRight").style.filter = "blur(8px)";
     switch(choices.length) {
         case 1: 
         option1.style.display = "block";
