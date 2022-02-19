@@ -154,7 +154,7 @@ function stopAnimation() {
         index++;
         
     } else {
-        option1.style.display = "block";
+
         index = 0;
         first = 20;
         makeChoice();
@@ -162,21 +162,20 @@ function stopAnimation() {
 }
 
 function makeChoice() {
-    var lenghtOfChoices = choices.length.toString();
-    switch(lenghtOfChoices) {
-        case '1': 
+    switch(choices.length) {
+        case 1: 
         option1.style.display = "block";
         break;
-        case '2':
+        case 2:
         option1.style.display = "block";
         option2.style.display = "block";
         break;
-        case '3':
+        case 3:
         option1.style.display = "block";
         option2.style.display = "block";
         option3.style.display = "block";
         break;
-        case '4':
+        case 4:
         option1.style.display = "block";
         option2.style.display = "block";
         option3.style.display = "block";
