@@ -61,7 +61,7 @@ var afterChoice2 = ["00Your exciting conversation is cut short by a stern-lookin
 
 var choices3 = ["At 8 PM, follow Taylor’s strange request", "At 8 PM, go to Film Appreciation Club"];
 var choice31 = ["00You decide you might as well take the opportunity to return Taylor’s forgotten textbook, so you grab it from her desk and decide against the Film Appreciation Club."];
-var choice32 = ["You decide Film Appreciation Club sounds indeed like a ‘hella hella chill’ plan, and you decide against Taylor’s strange request as you leave the room."];
+var choice32 = ["00You decide Film Appreciation Club sounds indeed like a ‘hella hella chill’ plan, and you decide against Taylor’s strange request as you leave the room."];
 txt = txtArray[0];
 
 var choiceNumber = 0;
@@ -310,7 +310,7 @@ function chosen(a) {
             break;
         }
         choices = choices2;
-    } else if (choicesMade == 2) {
+    } else if (choicesMade > 2) {
         switch(a) {
             case 1:
             document.getElementById("SpriteLeft").style.filter = "blur(0px)";
@@ -337,7 +337,8 @@ function chosen(a) {
             document.getElementById("body").style.transition = "0";
             break;
         }
-    } else {
+        choices = choices3;
+    } else if (choicesMade > 3) {
         switch(a) {
             case 1:
             document.getElementById("SpriteLeft").style.filter = "blur(0px)";
@@ -346,7 +347,7 @@ function chosen(a) {
             option2.style.display = "none";
             option3.style.display = "none";
             option4.style.display = "none";
-            txtArray = choice21.concat(afterChoice2);
+            txtArray = choice31;
             document.getElementById("body").style.transition = "1s";
             document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
             document.getElementById("body").style.transition = "0";
@@ -358,7 +359,7 @@ function chosen(a) {
             option2.style.display = "none";
             option3.style.display = "none";
             option4.style.display = "none";
-            txtArray = choice22.concat(afterChoice2);
+            txtArray = choice32;
             document.getElementById("body").style.transition = "1s";
             document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
             document.getElementById("body").style.transition = "0";
@@ -368,7 +369,6 @@ function chosen(a) {
     choicesMade++;
     txt = txtArray[0];
     first = 0;
-    index = 1;
     startAnimation();
 }
 
