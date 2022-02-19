@@ -320,9 +320,6 @@ function chosen(a) {
             option3.style.display = "none";
             option4.style.display = "none";
             txtArray = choice21.concat(afterChoice2);
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
             break;
             case 2:
             document.getElementById("SpriteLeft").style.filter = "blur(0px)";
@@ -332,9 +329,6 @@ function chosen(a) {
             option3.style.display = "none";
             option4.style.display = "none";
             txtArray = choice22.concat(afterChoice2);
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
             break;
         }
         choices = choices3;
