@@ -1,0 +1,10 @@
+html {
+    background-image: url(imgs/backgrounds/UGAHacks_7_Desktop.334f946d72c52951f25ba3a3fa75ab4b.png);
+    background-repeat: no-repeat;
+    background-position: center fixed;
+    background-size: cover;
+}
+
+.Options button { /* Button Group for Options */
+    display: block; 
+}
