@@ -7,7 +7,8 @@ var option1 = document.getElementById("Option1");
 var option2 = document.getElementById("Option2");
 var option3 = document.getElementById("Option3");
 var option4 = document.getElementById("Option4");
-const txtArray = ["E2You crack your eyes open to a gentle sunrise filtering through your windows, illuminating your extraordinarily messy room.",
+var speaker = document.getElementById("nameHeader");
+const txtArray = ["e2You crack your eyes open to a gentle sunrise filtering through your windows, illuminating your extraordinarily messy room.",
 "e1<i>Argh, what time is it?</i> you wonder to yourself. You roll over and click your alarm off. The time reads 7:57 am.",
 "t3…", 
 "t3OH CRAP!", 
@@ -18,10 +19,17 @@ var choiceNumber = 0;
 const choices = ["1", "2", "3", "4"];
 var choiceIndex = 0;
 
+
+/*  0 = you
+    1 = Elliot
+    2 = Taylor
+    3 = ?? */
+
 var first = 0;
 var italicized = false;
 
 function startAnimation() {
+    
     if (first == 0) {
         first = 1;
         textBox.innerHTML = "";
@@ -29,7 +37,9 @@ function startAnimation() {
             function textAnimation() {
                 if (i < txt.length) {
                     if (i < 2) {
+                        
                         if (txt.charAt(i) == 'e') {
+                            
                             i++;
                             switch(txt.charAt(i)) {
                                 case '0': 
@@ -64,7 +74,9 @@ function startAnimation() {
                                 break;
                             }
                             i++;
+                            speaker.innerText("Elliot");
                         } else if (txt.charAt(i) == 't') {
+                            
                             i++;
                             switch(txt.charAt(i)) {
                                 case '0': 
@@ -99,10 +111,13 @@ function startAnimation() {
                                 break;
                             }
                             i++;
+                            speaker.innerText("Taylor)");
                         } else {
                             i += 2;
                         }
                     }
+
+
                     if(txt.charAt(i) == '<' && txt.charAt(i + 1) == 'i' && txt.charAt(i + 2) == '>') {
                         italicized = true;
                         i += 2;
@@ -147,20 +162,21 @@ function stopAnimation() {
 }
 
 function makeChoice() {
-    switch(choices.length) {
-        case 1: 
+    var lenghtOfChoices = choices.length.toString();
+    switch(lenghtOfChoices) {
+        case '1': 
         option1.style.display = "block";
         break;
-        case 2:
+        case '2':
         option1.style.display = "block";
         option2.style.display = "block";
         break;
-        case 3:
+        case '3':
         option1.style.display = "block";
         option2.style.display = "block";
         option3.style.display = "block";
         break;
-        case 4:
+        case '4':
         option1.style.display = "block";
         option2.style.display = "block";
         option3.style.display = "block";
@@ -169,9 +185,9 @@ function makeChoice() {
     }
     choiceNumber = 0;
     option1.innerHTML = choices[choiceNumber++];
-    option1.innerHTML = choices[choiceNumber++];
-    option1.innerHTML = choices[choiceNumber++];
-    option1.innerHTML = choices[choiceNumber++];
+    option2.innerHTML = choices[choiceNumber++];
+    option3.innerHTML = choices[choiceNumber++];
+    option4.innerHTML = choices[choiceNumber++];
 }
 
 function Chosen(a) {

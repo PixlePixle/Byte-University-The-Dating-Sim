@@ -78,13 +78,13 @@ body {
     overflow: hidden;
     position: fixed;
     text-align: center;
-    color: white;
+
     overflow-wrap: break-word;
     hyphens: auto;
 }
 
 .BottomBox button {
-    background-image: url(imgs/backgrounds/w-qjCHPZbeXCQ-unsplash.jpg);
+    background-image: url(imgs/assets/text\ box\ texture.png);
     background-position: center 50%;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -92,26 +92,44 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+
+    border-width: 1em;
+    border-color: rgb(97, 89, 126);
+
+    margin: 1em;
+    padding-right: 0;
+
     opacity: 90%;
-    width: 100%;
+    width: 95%;
     height: 30vh;
 }
 
 .BottomBox .Overlay{
     position: absolute;
-    top: 0px; 
+    top: 45px; 
     left: 30vw; 
     width: 40%;
     min-width: 40%;
     max-width: 100%;
     height: auto;
-    color: white;
     font-size: calc((.4em + 0.5vmin) + (.4em + 0.2vmax));
     text-align: left;
 }
 
-.BottomBox .Overlay h1 {
+.BottomBox .Overlay #nameHeader {
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
     line-height: 0vh;
+}
+
+.BottomBox .Overlay p {
+    color: black;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    font-weight: bold;
 }
 
 
