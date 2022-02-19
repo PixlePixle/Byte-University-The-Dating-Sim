@@ -38,3 +38,8 @@ function stopAnimation() {
     txt = txtArray[index1];
     index1 += 1;
 }
+
+function changeImage(a) {
+    document.getElementById("SpriteRight").src=a;
+}
+
