@@ -1,5 +1,5 @@
 html {
-    background-image: url(imgs/backgrounds/2713227.png);
+    background-image: url(imgs/backgrounds/bedroom_morning_background\ fixed.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center 50% ;
@@ -9,6 +9,15 @@ html {
     -o-background-size: cover;
 }
 
+.Sprites {
+    display: flex;
+    justify-content: center;
+}
+
+.Sprites img {
+    max-width: 40%;
+    height: auto;
+}
 
 .Options button { /* Button Group for Options */
     margin: auto;
@@ -20,5 +29,6 @@ html {
 }
 
 .BottomBox {
+    display: block;
     color:white;
 }
