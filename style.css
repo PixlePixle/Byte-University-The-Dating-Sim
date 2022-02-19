@@ -1,10 +1,24 @@
 html {
-    background-image: url(imgs/backgrounds/UGAHacks_7_Desktop.334f946d72c52951f25ba3a3fa75ab4b.png);
+    background-image: url(imgs/backgrounds/2713227.png);
     background-repeat: no-repeat;
-    background-position: center fixed;
+    background-attachment: fixed;
+    background-position: center 50% ;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
+
 .Options button { /* Button Group for Options */
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(207, 170, 89);
+    padding: 10px;
     display: block; 
+    display: none;
+}
+
+.BottomBox {
+    color:white;
 }
