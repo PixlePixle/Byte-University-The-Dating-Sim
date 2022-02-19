@@ -1,4 +1,4 @@
-html {
+body {
     background-image: url(imgs/backgrounds/bedroom_morning_background\ fixed.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -9,15 +9,9 @@ html {
     -o-background-size: cover;
 
     box-sizing: border-box;
-
-    
-}
-
-
-
-body {
     position: relative;
     overflow: hidden;
+
 }
 
 .Sprites {
@@ -46,6 +40,7 @@ body {
     bottom: -100vh;
     right: 2vw;
     position: absolute;
+    display: none;
 }
 
 .OptionsWrapper {
@@ -74,6 +69,7 @@ body {
     opacity: 60%;
     transition: 0.5s;
     display: none;
+    font-family: 'Lilita One', cursive;
 }
 
 .OptionsWrapper #Options button:hover {
@@ -98,6 +94,7 @@ body {
     overflow-wrap: break-word;
     hyphens: auto;
     
+    
 }
 
 .BottomBox button {
@@ -121,6 +118,8 @@ body {
     opacity: 90%;
     width: 95%;
     height: 30vh;
+    display: none;
+    
 }
 
 .BottomBox .Overlay{
@@ -141,9 +140,11 @@ body {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     line-height: 0vh;
+    font-family: 'Lilita One', cursive;
 }
 
 .BottomBox .Overlay p {
+    font-family: 'Lilita One', cursive;
     color: black;
     -webkit-text-fill-color: white;
     -webkit-text-stroke-width: 1px;

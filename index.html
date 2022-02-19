@@ -5,29 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Byte University!</title>
+    
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet"> 
+
+
 </head>
-<body>
+<body id="body">
     <div class="Sprites">
         <img id="SpriteLeft" src="imgs/characters/elliot_concept.png">
-        <img id="SpriteRight" src="imgs/characters/Taylor/taylor confused low key offended.png">
+        <img id="SpriteRight" src="imgs/characters/Taylor/taylor cry.png">
     </div>
     <div class="OptionsWrapper">
         <div id="Options">
-            <button id="Option1" onclick="chosen('1')">Option 1</button>
-            <button id="Option2" onclick="chosen('2')">Option 2</button>
-            <button id="Option3" onclick="chosen('3')">Option 3</button>
-            <button id="Option4" onclick="chosen('4')">Option 4</button>
+            <button id="Option1" onclick="chosen(1)">Option 1</button>
+            <button id="Option2" onclick="chosen(2)">Option 2</button>
+            <button id="Option3" onclick="chosen(3)">Option 3</button>
+            <button id="Option4" onclick="chosen(4)">Option 4</button>
         </div>
     </div>
     <div class="BottomBox">
         <button id="Textbox" onclick="startAnimation()">
             <div class="Overlay">
-                <h1 id="nameHeader">Tayasfaslor</h1>
-                <p id="animatedText">Text goes after: </p>
+                <h1 id="nameHeader">“BEEP. BEEP. BEEP. BEEP. BEEP.”</h1>
+                <p id="animatedText"><i>Click here to get started.</i></p>
             </div>
         </button>
     </div>
+    <p id="ScenariosKeepTrackOf"></p>
 </body>
-<script src="SceneTemplate1.js"></script> 
+<script src="Intro.js"></script> 
 </html>
