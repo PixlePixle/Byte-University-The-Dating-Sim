@@ -54,7 +54,7 @@ body {
 }
 
 .OptionsWrapper #Options {
-    display: none;
+    
 }
 
 .OptionsWrapper #Options button { /* Button Group for Options */
@@ -67,7 +67,7 @@ body {
     display: block; 
     opacity: 60%;
     transition: 1s;
-
+    display: none;
 }
 
 .BottomBox {
@@ -98,6 +98,7 @@ body {
 
     margin: 1em;
     padding-right: 0;
+    
 
     opacity: 90%;
     width: 95%;

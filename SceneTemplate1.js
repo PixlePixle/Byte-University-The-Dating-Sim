@@ -154,7 +154,7 @@ function stopAnimation() {
         index++;
         
     } else {
-
+        option1.style.display = "block";
         index = 0;
         first = 20;
         makeChoice();
