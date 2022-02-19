@@ -1,10 +1,108 @@
 html {
-    background-image: url(imgs/backgrounds/UGAHacks_7_Desktop.334f946d72c52951f25ba3a3fa75ab4b.png);
+    background-image: url(imgs/backgrounds/bedroom_morning_background\ fixed.png);
     background-repeat: no-repeat;
-    background-position: center fixed;
+    background-attachment: fixed;
+    background-position: center 50% ;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    box-sizing: border-box;
 }
 
-.Options button { /* Button Group for Options */
-    display: block; 
+body {
+    position: relative;
+    overflow: hidden;
 }
+
+.Sprites {
+    display: flex;
+    justify-content: center;
+
+}
+
+.Sprites img {
+    max-width: 40vw;
+    min-width: 50vh;
+    height: auto;
+}
+
+.Sprites #SpriteLeft {
+    position: absolute;
+    transform: scaleX(-1);
+    bottom: -100vh;
+    left: 2vw;
+    display: none;
+
+}
+
+.Sprites #SpriteRight {
+    bottom: -100vh;
+    right: 2vw;
+    position: absolute;
+}
+
+.OptionsWrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    max-width: 80%;
+    min-width: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.OptionsWrapper .Options button { /* Button Group for Options */
+    margin: auto;
+    height: auto;
+    border: 3px solid rgb(207, 170, 89);
+    padding: 10px;
+    display: block; 
+    display: none;
+}
+
+.BottomBox {
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    color: white;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.BottomBox button {
+    background-image: url(imgs/backgrounds/w-qjCHPZbeXCQ-unsplash.jpg);
+    background-position: center 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    opacity: 90%;
+    width: 100%;
+    height: 30vh;
+}
+
+.BottomBox .Overlay{
+    position: absolute;
+    top: 0px; 
+    left: 30vw; 
+    width: 40%;
+    min-width: 40%;
+    max-width: 100%;
+    height: auto;
+    color: white;
+    font-size: calc((.4em + 0.5vmin) + (.4em + 0.2vmax));
+    text-align: left;
+}
+
+.BottomBox .Overlay h1 {
+    line-height: 0vh;
+}
+
+
