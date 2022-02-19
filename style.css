@@ -130,7 +130,7 @@ body {
     min-width: 40%;
     max-width: 100%;
     height: auto;
-    font-size: calc((.4em + 0.5vmin) + (.4em + 0.2vmax));
+    font-size: 22px;
     text-align: left;
 }
 

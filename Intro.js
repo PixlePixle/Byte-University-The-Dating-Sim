@@ -34,10 +34,39 @@ var afterChoice1 = ["E0You run into the classroom a second before the late bell 
 "11You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e1“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
+var choices2 = ["Ellie, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."]
+var choice21 = ["e2Oh yea, you’re….uh…(player-name), right?"];
+var choice22 = ["e2Oh. Weird. Well, whatever."];
 
+var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
+"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. This class will require a lot of cooperation and teamwork with your other classmates.",
+"20“For this reason, we will be doing everyone’s favorite activity: icebreakers! With randomized partners!”",
+"00A collective groan issues from the classroom. She begins calling out names and partnering them up randomly.",
+"20“Aaaand…(player-name)!”",
+"00You stand up and look at the professor. You realize just how incredibly scary she is when she looks at you. ",
+"20“Why don’t we pair you with…Taylor! Could Taylor stand up please?”",
+"00You scan the room, looking for who must be Taylor. And then, at the very back of the classroom, completely alone, you spot her: the girl from this morning, standing up meekly.",
+"00Mrs.Byte nods and continues reading the names while Taylor makes her way down the classroom to sit next to you. She plops down into the seat on the right of you and stares down at the ground, fidgeting.",
+"00“Sooooo…sorry about this morning. Glad you made it to class on time, though,” you venture to say. ",
+"00“....whatever…”",
+"00In the time it took for her to utter this one word, the class had already ended. You are packing up your things to go when she suddenly grabs your sleeve.",
+"00“have you ever…heard of…leetcode?”",
+"00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
+"00You see Taylor’s eyes light up. She looks at you straight in the eyes for the first time today.",
+"00“Come to room 304 tonight at 8. I’ll be waiting.”",
+"00And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
+"00",
+"00Elliot: “Hi, (player-name). So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.” And with that, Elliot leaves.",
+"00Well, now you have a decision to make. You know you don’t have plans tonight, so you might as well go to one. But which one?"];
+
+var choices3 = ["At 8 PM, follow Taylor’s strange request", "At 8 PM, go to Film Appreciation Club"];
+var choice31 = ["00You decide you might as well take the opportunity to return Taylor’s forgotten textbook, so you grab it from her desk and decide against the Film Appreciation Club."];
+var choice32 = ["You decide Film Appreciation Club sounds indeed like a ‘hella hella chill’ plan, and you decide against Taylor’s strange request as you leave the room."];
 txt = txtArray[0];
 
 var choiceNumber = 0;
+
+var choicesMade = 0;
 
 var choiceIndex = 0;
 
@@ -56,7 +85,7 @@ function startAnimation() {
         document.getElementById("body").style.transition = "0";
         wakeup = true;
     }
-    if (first == 0 && (index == 5 || index == 6 || index == 8)) {
+    if (first == 0 && (index == 5 || index == 6 || index == 8) && choicesMade == 0) {
         if (index == 5) {
             document.getElementById("body").style.transition = "1s";
             document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
@@ -68,6 +97,14 @@ function startAnimation() {
             document.getElementById("body").style.transition = "0";
         } else if (index == 8) {
             document.getElementById("SpriteRight").style.display = "flex";
+        }
+    }
+    if (first == 0 && index == 2 && choicesMade == 1) {
+        if (index == 2) {
+            document.getElementById("body").style.backgroundImage = "url('imgs/backgrounds/bedroom_morning_background fixed.png')";
+            document.getElementById("body").style.transition = "1.5s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,0)";
+            document.getElementById("body").style.transition = "0";
         }
     }
     if (first == 0) {
@@ -164,6 +201,8 @@ function startAnimation() {
                                 speaker.innerHTML = "";
                             } else if (txt.charAt(i) == '1') {
                                 speaker.innerHTML = "You";
+                            } else if (txt.charAt(i) == '2') {
+                                speaker.innerHTML = "Byte";
                             }
                             i += 2;
                         }
@@ -206,7 +245,7 @@ function stopAnimation() {
         index++;
         
     } else {
-        index = 0;
+        index = 1;
         first = 20;
         makeChoice();
     }
@@ -243,46 +282,93 @@ function makeChoice() {
 }
 
 function chosen(a) {
-    switch(a) {
-        case 1:
-        document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-        document.getElementById("SpriteRight").style.filter = "blur(0px)";
-        option1.style.display = "none";
-        option2.style.display = "none";
-        option3.style.display = "none";
-        option4.style.display = "none";
-        txtArray = choice11.concat(afterChoice1);
-        break;
-        case 2:
-        document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-        document.getElementById("SpriteRight").style.filter = "blur(0px)";
-        option1.style.display = "none";
-        option2.style.display = "none";
-        option3.style.display = "none";
-        option4.style.display = "none";
-        txtArray = choice12.concat(afterChoice1);
-        break;
-        case 3:
-        document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-        document.getElementById("SpriteRight").style.filter = "blur(0px)";
-        option1.style.display = "none";
-        option2.style.display = "none";
-        option3.style.display = "none";
-        option4.style.display = "none";
-        txtArray = choice11.concat(afterChoice1);
-        break;
-        case 4:
-        document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-        document.getElementById("SpriteRight").style.filter = "blur(0px)";
-        option1.style.display = "none";
-        option2.style.display = "none";
-        option3.style.display = "none";
-        option4.style.display = "none";
-        txtArray = choice11.concat(afterChoice1);
-        break;
+    if(choicesMade == 0) {
+        switch(a) {
+            case 1:
+            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+            document.getElementById("SpriteRight").style.filter = "blur(0px)";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            txtArray = choice11.concat(afterChoice1);
+            document.getElementById("body").style.transition = "1s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+            document.getElementById("body").style.transition = "0";
+            break;
+            case 2:
+            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+            document.getElementById("SpriteRight").style.filter = "blur(0px)";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            txtArray = choice12.concat(afterChoice1);
+            document.getElementById("body").style.transition = "1s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+            document.getElementById("body").style.transition = "0";
+            break;
+        }
+        choices = choices2;
+    } else if (choicesMade == 2) {
+        switch(a) {
+            case 1:
+            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+            document.getElementById("SpriteRight").style.filter = "blur(0px)";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            txtArray = choice21.concat(afterChoice2);
+            document.getElementById("body").style.transition = "1s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+            document.getElementById("body").style.transition = "0";
+            break;
+            case 2:
+            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+            document.getElementById("SpriteRight").style.filter = "blur(0px)";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            txtArray = choice22.concat(afterChoice2);
+            document.getElementById("body").style.transition = "1s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+            document.getElementById("body").style.transition = "0";
+            break;
+        }
+    } else {
+        switch(a) {
+            case 1:
+            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+            document.getElementById("SpriteRight").style.filter = "blur(0px)";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            txtArray = choice21.concat(afterChoice2);
+            document.getElementById("body").style.transition = "1s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+            document.getElementById("body").style.transition = "0";
+            break;
+            case 2:
+            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+            document.getElementById("SpriteRight").style.filter = "blur(0px)";
+            option1.style.display = "none";
+            option2.style.display = "none";
+            option3.style.display = "none";
+            option4.style.display = "none";
+            txtArray = choice22.concat(afterChoice2);
+            document.getElementById("body").style.transition = "1s";
+            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+            document.getElementById("body").style.transition = "0";
+            break;
+        }
     }
+    choicesMade++;
     txt = txtArray[0];
-    stopAnimation();
+    first = 0;
+    index = 1;
     startAnimation();
 }
 
