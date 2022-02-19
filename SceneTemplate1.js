@@ -8,20 +8,17 @@ const txtArray = ["You crack your eyes open to a gentle sunrise filtering throug
 "<i>Argh, what time is it?</i> you wonder to yourself. You roll over and click your alarm off. The time reads 7:57 am.",
 "…", 
 "OH CRAP!", 
-"You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door."]
+"You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door."];
 txt = txtArray[0];
 
 var choiceNumber = 0;
-const choices = ["1", "2", "3", "4",
-                 "5", "6", "7", "8",
-                 "9","10","11","12"];
+const choices = ["1", "2", "3", "4"];
+var choiceIndex = 0;
 
 var first = 0;
 var italicized = false;
-var makeChoice = false;
 
 function startAnimation() {
-    
     if (first == 0) {
         first = 1;
         textBox.innerHTML = "";
@@ -68,17 +65,24 @@ function stopAnimation() {
         index = 0;
         first = 20;
         makeChoice();
-
     }
 }
 
-
-
 function makeChoice() {
+    choiceNumber = 0;
     document.getElementById("Option1").innerHTML = choices[choiceNumber++];
     document.getElementById("Option2").innerText = choices[choiceNumber++];
     document.getElementById("Option3").innerText = choices[choiceNumber++];
     document.getElementById("Option4").innerText = choices[choiceNumber++];
+}
+
+function Chosen(a) {
+    switch(a) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+    }
 }
 
 function changeImage(a) {
