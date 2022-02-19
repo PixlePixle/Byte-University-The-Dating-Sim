@@ -7,11 +7,19 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
 }
 
 .Sprites {
     display: flex;
     justify-content: center;
+
 }
 
 .Sprites img {
@@ -29,6 +37,24 @@ html {
 }
 
 .BottomBox {
-    display: block;
-    color:white;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    color: white;
+}
+
+.BottomBox img {
+    opacity: 90%;
+}
+
+.BottomBox .Overlay {
+    position: absolute;
+    top: 0px; 
+    left: 0; 
+    width: 100%;
+    color: black;
 }
