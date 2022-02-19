@@ -74,7 +74,7 @@ function startAnimation() {
                                 break;
                             }
                             i++;
-                            speaker.innerText("Elliot");
+                            speaker.innerHTML = "Elliot";
                         } else if (txt.charAt(i) == 't') {
                             
                             i++;
@@ -111,9 +111,11 @@ function startAnimation() {
                                 break;
                             }
                             i++;
-                            speaker.innerText("Taylor)");
+                            speaker.innerHTML = "Taylor";
                         } else {
                             i += 2;
+                            changeImage();
+                            speaker.innerHTML = "You";
                         }
                     }
 
