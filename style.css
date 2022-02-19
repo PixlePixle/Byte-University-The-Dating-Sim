@@ -54,10 +54,13 @@ body {
 
 .OptionsWrapper .Options button { /* Button Group for Options */
     margin: auto;
+    margin-bottom: 2vh;
+    width: 33vw;
     height: auto;
     border: 3px solid rgb(207, 170, 89);
     padding: 10px;
     display: block; 
+    opacity: 60%;
     /* display: none; */
 }
 

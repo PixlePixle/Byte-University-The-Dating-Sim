@@ -25,3 +25,7 @@ function stopAnimation() {
     document.getElementById("Textbox").removeChild;
     document.getElementById("Textbox").appendChild(startAnimation);
 }
+
+function changeImage(a) {
+    document.getElementById("SpriteRight").src=a;
+}
