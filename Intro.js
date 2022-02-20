@@ -30,7 +30,7 @@ var choice12 = ["T2You see her face scrunch up as a tear rolls down her face bef
 var choices = choices1;
 
 var afterChoice1 = [2, "//You run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead. Every single seat next to him is empty.",
-"//You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
+"00You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
 var choices2 = ["Ellie, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."]
@@ -144,6 +144,7 @@ function startAnimation() {
                         
                         if (txt.charAt(i) == 'e' || txt.charAt(i) == 'E') {
                             i++;
+                            setTimeout(() => {document.getElementById("SpriteRight").style.display = 'flex';}, 50);
                             switch(txt.charAt(i)) {
                                 case '0': 
                                 changeImage('imgs/characters/Elliot/elliot blush normal.png');
@@ -176,13 +177,14 @@ function startAnimation() {
                                 changeImage('imgs/characters/Elliot/');
                                 break;
                             }
-                            document.getElementById("SpriteRight").style.display = 'flex';
+                            
                             i++;
                             if (txt.charAt(i-2) != 'E') {
                                 speaker.innerHTML = "Elliot";
                             }
                         } else if (txt.charAt(i) == 't' || txt.charAt(i) == 'T') {
                             i++;
+                            setTimeout(() => {document.getElementById("SpriteRight").style.display = 'flex';}, 50);
                             switch(txt.charAt(i)) {
                                 case '0': 
                                 changeImage('imgs/characters/Taylor/taylor normal.png');
@@ -215,7 +217,7 @@ function startAnimation() {
                                 changeImage('imgs/characters/Taylor/blood.png');
                                 break;
                             }
-                            document.getElementById("SpriteRight").style.display = 'flex'
+                            
                             i++;
                             if (metTaylor && txt.charAt(i-2) != 'T') {
                                 speaker.innerHTML = "Taylor";
