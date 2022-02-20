@@ -420,8 +420,8 @@ function changeImage(a) {
 }
 
 function changeBack(a) {
-    document.getElementById("body").style.backgroundImage = a;
     document.getElementById("body").style.transition = "1s";
+    document.getElementById("body").style.backgroundImage = a;
     document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,0)";
     document.getElementById("body").style.transition = "0";
 }
