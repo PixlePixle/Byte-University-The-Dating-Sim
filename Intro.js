@@ -15,12 +15,12 @@ var txtArray = ["00You crack your eyes open. The time on your clock reads 7:25."
 "00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early and make a good impression on your teachers, but now you have three minutes to get to school before the late bell rings.",
 1, "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
 "00<i>BAM!</i>",
-"T3You slam full speed into a girl, and you see several books spill from her arms. You notice the title of one of the textbooks:",
+"T3You slam full speed into a girl, and several books spill from her arms. You notice the title of one of the textbooks:",
 "00<i>“Introduction to Natural Language Processing and Machine Learning Techniques, by Dr.Byte.”</i>",
 "00Wait a minute, that’s a class you’ll be taking this semester! This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her and caused her to drop all of her books."];
 
 
-var choices1 = ["“I’m so sorry! Let me help you with that.”", "“Watch where you’re going next time, you punk.”"];
+var choices1 = ["“I’m so sorry! Let me help you with those.”", "“Watch where you’re going next time, you punk.”"];
 
 var metTaylor = true;
 
@@ -39,13 +39,13 @@ var choice22 = ["00Oh. Weird. Well, whatever."];
 
 var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
 "20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
-"T5“have you ever…heard of…leetcode?”",
+"t5“Wait. Have…you ever…heard of…LeetCode?”",
 "00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
 "T7You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
 "t7“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
 "//And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
-"e0Elliot: “Hi. So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.” And with that, Elliot leaves.",
-"00Well, now you have a decision to make. You know you don’t have plans tonight, so you might as well go to one. But which one?"];
+"e0Elliot: “Hi. So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.”",
+"//And with that, Elliot leaves.","00Well, now you have a decision to make. You know you don’t have plans tonight, so you might as well go to one. But which one?"];
 
 var choices3 = ["At 8 PM, follow Taylor’s strange request", "At 8 PM, go to Film Appreciation Club"];
 var choice31 = ["//You decide you might as well take the opportunity to return Taylor’s forgotten textbook, so you grab it from her desk and decide against the Film Appreciation Club."];
@@ -77,6 +77,29 @@ var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to 
 , "00He seems to ponder an idea for a second, then nod, as if coming to a solution.", "e0“Yup, we can make an exception for you. Unless, well. Unless you wanted to watch a movie. With me. Probably on the weekend? They’re showing some good stuff. Well, whatever. We can talk about this later.”"
 , "E0Elliot leaves the room, but he stops in the doorway, swings around on one heel, and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
 , "//And with that, Elliot leaves the first meeting of Film Appreciation Club."];
+
+var CodeAppreciationClub = [3,"//You walk into room 304, holding Taylor’s textbook to your chest. The room is dark, save for the light from a MacBook at the front of the room. Taylor sits in front of it, incredibly focused on the screen with an intensity that seems nothing like the girl you met earlier today.",
+"T4“Hi,” you call out to her.","T3She looks at you and immediately blushes, looking at the ground.", "t5“Hi. Welcome to…the very first meeting…of LeetCode Appreciation Club.”",
+"00Her voice is so quiet, you can barely make out the words. <i>LeetCode Appreciation Club?</i> You find yourself wondering whether coming here was really the better decision.", "00Without looking up, she pats the seat next to her. You make your way over and sit down, pulling your chair close enough to see her screen."
+, "T5You hand her the forgotten textbook from earlier today. “You forgot this,” you say. She looks up and grabs the textbook from your hands quickly.", "t3 “.......thanks.”", "t5“Anyways…what do you think about LeetCode?”"]
+
+var choicesCode1 = ["I love it! LeetCode is probably the best thing ever made!!!!!!", "Ehhh. Not my favorite thing in the world."];
+var choicesCode11 = ["t0“Really?! This is the first time…I’ve met anyone else…besides me…”"];
+var choicesCode12 = ["t8“Oh…well… it’s not for everyone…I guess.”"];
+var afterChoicesCode1 = ["t5“Well anyways, do you want to do…a few problems? I mean, I’m not the best at them, but…if you’d like to…”",
+"00Well, it’s the LeetCode Appreciation Club, right? Might as well do some LeetCode.", "t0“Great! So, we can start…well, we can start easy! What about…this one?”", "00She points to a problem labeled ‘easy’. You lean over and look at her screen. The title says ‘Two Sum’. You attempt to read the rest of the problem, but you find you can’t understand a single word. The problem is complete and utter technical gibberish to you.",
+"t5“So…what do you think?”"];
+
+var choicesCode2 = ["Oh, this is so easy! I could do this in my sleep!", "I actually…don’t understand it."];
+var choicesCode21 = ["T8Taylor seems surprised. She looks at you for a second, then back at the problem.", "t8“Oh! Well…alright…then. Try it.”", "00You’re actually a little ashamed to have to admit you don’t have the slightest idea how to do it. You stare at the problem for a few minutes, feigning understanding, before conceding and admitting the fact you have absolutely no idea what is going on.",
+"t5“Oh…well…you didn’t have to lie…I guess I can explain it.”"];
+var choicesCode22 = ["t7“Ah! That’s totally fine. I actually…It took me a while to get, too! Don’t worry, we can…we can do it together!”"];
+var afterChoicesCode2 = ["t4“Anyways, so the idea here is you have an array, which is basically just like a list of numbers, and you want to find two specific elements, since you know there’s always a solution.", "t4And you could just iterate through the array twice and check for every number if it adds up to your target, but that’s super inefficient, so, uh, there’s actually this thing called a hashmap…”",
+"00Taylor continues on with her explanation, and although you can only catch bits and pieces, you notice that as she talks it's as if she's a whole new person.",
+"t0“Well…ok. That was a lot! I guess we can…we can conclude the first meeting of the LeetCode Appreciation Club!”", "t7“That was…fun! It was fun! Let’s do it again sometime, okay?”",
+"//And with that, she quickly shoves her laptop in her bag and runs out of the room."];
+
+endChoice = ["Thanks for playing!"]
 
 var choiceNumber = 0;
 
@@ -323,14 +346,15 @@ function chosen(a) {
         switch(a) {
             case 1:
                 path = 1;
-                txtArray = choice31;
+                txtArray = choice31.concat(CodeAppreciationClub);
+                choices = choicesCode1;
                 break;
             case 2:
                 path = 2
                 txtArray = choice32.concat(FilmAppreciationClub);
+                choices = choicesFilm1;
                 break;
         }
-        choices = choicesFilm1;
     } else if (choicesMade == 3) {
         if (path == 2) {
             switch(a) {
@@ -348,7 +372,17 @@ function chosen(a) {
                     break;
             }
             choices = choicesFilm2;
-        } else {}
+        } else {
+            switch(a) {
+                case 1:
+                    txtArray = choicesCode11.concat(afterChoicesCode1);
+                    break;
+                case 2:
+                    txtArray = choicesCode12.concat(afterChoicesCode1);
+                    break;
+            }
+            choices = choicesCode2;
+        }
     } else if (choicesMade == 4) {
         if (path == 2) {
             switch(a) {
@@ -359,7 +393,20 @@ function chosen(a) {
                     txtArray = choicesFilm22.concat(afterChoicesFilm2);
                     break;
             }
+        } else {
+            switch(a) {
+                case 1:
+                    txtArray = choicesCode21.concat(afterChoicesCode2);
+                    break;
+                case 2:
+                    txtArray = choicesCode22.concat(afterChoicesCode2);
+                    break;
+            }
         }
+        choices = endChoice;
+    } else if (choicesMade == 5) {
+        endGame();
+        return;
     }
     choicesMade++;
     txt = txtArray[0];
@@ -376,6 +423,13 @@ function changeBack(a) {
     document.getElementById("body").style.transition = "1s";
     document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,0)";
     document.getElementById("body").style.transition = "0";
+}
+
+function endGame() {
+    document.getElementById("body").style.transition = "1s";
+    document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+    document.getElementById("body").style.transition = "0";
+    textBox.innerHTML = "Thanks for playing through this small demo of our game! We hope to be able to continue working on it even after the hackathon :)"
 }
 
 /* IDK JUST RUN CODE DOWN HERE WOOO! */
