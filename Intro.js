@@ -34,26 +34,25 @@ var afterChoice1 = [2, "//You run into the classroom a second before the late be
 "e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
 var choices2 = ["Ellie, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."]
-var choice21 = ["00Oh yea, you’re….uh…(player-name), right?"];
+var choice21 = ["00Oh yea, I remember you! From fourth grade, right?"];
 var choice22 = ["00Oh. Weird. Well, whatever."];
 
 var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
 "20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
 "t5“have you ever…heard of…leetcode?”",
 "00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
-"00You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
+"t7You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
 "00“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
-"00And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
-"00",
-"00Elliot: “Hi, (player-name). So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.” And with that, Elliot leaves.",
+"//And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
+"e0Elliot: “Hi. So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.” And with that, Elliot leaves.",
 "00Well, now you have a decision to make. You know you don’t have plans tonight, so you might as well go to one. But which one?"];
 
 var choices3 = ["At 8 PM, follow Taylor’s strange request", "At 8 PM, go to Film Appreciation Club"];
-var choice31 = ["00You decide you might as well take the opportunity to return Taylor’s forgotten textbook, so you grab it from her desk and decide against the Film Appreciation Club."];
-var choice32 = ["00You decide Film Appreciation Club sounds indeed like a ‘hella hella chill’ plan, and you decide against Taylor’s strange request as you leave the room."];
+var choice31 = ["//You decide you might as well take the opportunity to return Taylor’s forgotten textbook, so you grab it from her desk and decide against the Film Appreciation Club."];
+var choice32 = ["//You decide Film Appreciation Club sounds indeed like a ‘hella hella chill’ plan, and you decide against Taylor’s strange request as you leave the room."];
 txt = txtArray[0];
 
-var FilmAppreciationClub = ["00You walk into the classroom, and to your surprise, it’s completely empty. You wonder if you’ve gone to the right room, but you spot Elliot standing near the front of the room."
+var FilmAppreciationClub = [3,"00You walk into the classroom, and to your surprise, it’s completely empty. You wonder if you’ve gone to the right room, but you spot Elliot standing near the front of the room."
 ,"e1Yo, you made it. Knew you’d come. Welcome to the Byte University Film Appreciation Club.", "00You look around at the desolate classroom and notice a smirk on Elliot’s face.", "00“Uh…so I’m the first one here. I thought I’d be late,” you say."
 , "e2“Well, uh it’s actually just you. There were some others. But they didn’t respect the art. Not like I do. So, as president, I kicked em out. Couldn’t handle it.”", "e1 “But hey, you’re here. So, welcome to Film Appreciation Club.”"
 ,"00“Uh, ok. So what’s the plan, O God of Film?” you say.", "e3“Well, since all the members of the club are here, I guess we can begin. Let’s start with something basic. You literally can’t get this wrong. What’s your favorite film?”"];
@@ -70,6 +69,11 @@ var choicesFilm14 = ["00“Hmm…” You think for a moment. “Well, I really l
 , "00Elliot’s look of disgust morphs into a look of resigned disappointment.", "e2“That’s not the–whatever. Ok. Listen. We’re gonna have to fix this later. But let’s just go into movie analysis. This one’s even easier."];
 
 var afterChoicesFilm1 = ["e4“You’ve seen The Wolf of Wall Street, right? Cmon.”"];
+
+var choicesFilm2 = ["Of course I have!", "What's that? Is that an anime or something?"];
+var choicesFilm21 = ["e0Elliot seems relieved at this answer.","E0'Oh thank God. You're redeemable after all. Maybe it isn't too late for you."];
+var choicesFilm22 = ["e5Elliot looks absolutely frustrated with you.", "E0“Ah. Well. I honestly don’t–I don’t even know if we can fix you at this point.”"];
+
 
 var choiceNumber = 0;
 
@@ -100,6 +104,8 @@ function startAnimation() {
             case 2:
                 changeBack("url('imgs/backgrounds/classroom light.png')");
                 break;
+            case 3:
+                changeBack("url('imgs/backgrounds/classroom dark.png')");
         }
         stopAnimation();
     }
