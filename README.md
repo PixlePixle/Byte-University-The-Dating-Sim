@@ -11,7 +11,7 @@ Byte University: The Dating Sim was created as our first ever Hackathon project.
 Due to our lack of background, this project was definitely difficult to start. There were many things that we didn't know when we first began but we're confident enough to say that we learnt a lot throughout the time we had for the hackathon. It was a great experience for us and we had a lot of fun. <br>
 <br>
 
-## Link: to the game: <a href="https://pixlepixle.github.io/Byte-University-The-Dating-Sim/">https://pixlepixle.github.io/Byte-University-The-Dating-Sim/</a>
+## Link: to the game: <a href="https://pixlepixle.github.io/Byte-University-The-Dating-Sim/">byteuniversity.tech</a>
 
 <br>
 <br>
