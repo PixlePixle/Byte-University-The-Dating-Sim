@@ -33,9 +33,9 @@ var afterChoice1 = [2, "//You run into the classroom a second before the late be
 "00You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
-var choices2 = ["Ellie, we lived next to each other for 14 years!”", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
+var choices2 = ["Elliot, we lived next to each other for 14 years!”", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
 var choice21 = ["e0“Oh yea, I remember you! From fourth grade, right?”"];
-var choice22 = ["e0“Oh. Weird. Well, whatever."];
+var choice22 = ["e0“Oh. Weird. Well, whatever.”"];
 
 var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
 "20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
