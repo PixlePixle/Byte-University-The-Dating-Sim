@@ -48,7 +48,7 @@ body {
 
 .OptionsWrapper {
     position: fixed;
-    top: 50%;
+    top: 35%;
     left: 50%;
     max-width: 80%;
     min-width: 80%;
@@ -73,6 +73,7 @@ body {
     transition: 0.5s;
     display: none;
     font-family: 'Lilita One', cursive;
+    font-size: 22px;
 }
 
 .OptionsWrapper #Options button:hover {
@@ -129,12 +130,16 @@ body {
     position: absolute;
     top: 45px; 
     left: 30vw; 
-    width: 40%;
+    width: 60%;
     min-width: 40%;
     max-width: 100%;
     height: auto;
-    font-size: 22px;
+    font-size: 30px;
+    position: fixed;
+    top: 70%;
+    left: 18%;
     text-align: left;
+
 }
 
 .BottomBox .Overlay #nameHeader {
@@ -144,7 +149,11 @@ body {
     -webkit-text-stroke-color: black;
     line-height: 0vh;
     font-family: 'Lilita One', cursive;
-    font-size: 30px;
+    font-size: 50px;
+    position: fixed;
+    top: 78%;
+    left: 6.9%;
+    text-align: center;
 }
 
 .BottomBox .Overlay p {
