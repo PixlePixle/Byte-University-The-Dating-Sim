@@ -8,29 +8,28 @@ var option2 = document.getElementById("Option2");
 var option3 = document.getElementById("Option3");
 var option4 = document.getElementById("Option4");
 var speaker = document.getElementById("nameHeader");
-var txtArray = ["00You crack your eyes open to a gentle sunrise filtering through your windows, illuminating your extraordinarily messy room.",
-"00<i>Argh, what time is it?</i> you wonder to yourself. You roll over and turn your alarm off. The time reads 7:57 am.",
-"11…", 
-"11OH CRAP!", 
+var path = 0;
+var txtArray = ["t2You crack your eyes open. The time on your clock reads 7:25.",
+"//OH CRAP!", 
 "00You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door.",
 "00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early and make a good impression on your teachers, but now you have three minutes to get to school before the late bell rings.",
 "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
 "T2<i>BAM!</i>",
-"00You slam full speed into a girl, and you see several books spill from her arms. You notice the title of one of the textbooks:",
+"T2You slam full speed into a girl, and you see several books spill from her arms. You notice the title of one of the textbooks:",
 "00<i>“Introduction to Natural Language Processing and Machine Learning Techniques, by Dr.Byte.”</i>",
 "00Wait a minute, that’s a class you’ll be taking this semester! This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her and caused her to drop all of her books."];
 
 
-var choices1 = ["“I’m so sorry! Let me help you with that.”", "“Watch where you’re going next time.”"];
+var choices1 = ["“I’m so sorry! Let me help you with that.”", "“Watch where you’re going next time, you punk.”"];
 
-var metTaylor = false;
+var metTaylor = true;
 
 var choice11 = ["00You bend down and try to help her with her books, but she lets out a high-pitched yelp and kicks you in the side. You look at her, bewildered, before deciding to just leave and begin running to school again."];
 var choice12 = ["00You see her face scrunch up as a tear rolls down her face before you hear her making tiny little sobs. She bends down to pick her things up, shielding her face from you, and you begin running to school again."];
 
 var choices = choices1;
 
-var afterChoice1 = ["E0You run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead. Every single seat next to him is empty.",
+var afterChoice1 = ["enYou run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead. Every single seat next to him is empty.",
 "11You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e1“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
@@ -39,21 +38,11 @@ var choice21 = ["e2Oh yea, you’re….uh…(player-name), right?"];
 var choice22 = ["e2Oh. Weird. Well, whatever."];
 
 var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
-"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. This class will require a lot of cooperation and teamwork with your other classmates.",
-"20“For this reason, we will be doing everyone’s favorite activity: icebreakers! With randomized partners!”",
-"00A collective groan issues from the classroom. She begins calling out names and partnering them up randomly.",
-"20“Aaaand…(player-name)!”",
-"00You stand up and look at the professor. You realize just how incredibly scary she is when she looks at you. ",
-"20“Why don’t we pair you with…Taylor! Could Taylor stand up please?”",
-"00You scan the room, looking for who must be Taylor. And then, at the very back of the classroom, completely alone, you spot her: the girl from this morning, standing up meekly.",
-"00Mrs.Byte nods and continues reading the names while Taylor makes her way down the classroom to sit next to you. She plops down into the seat on the right of you and stares down at the ground, fidgeting.",
-"00“Sooooo…sorry about this morning. Glad you made it to class on time, though,” you venture to say. ",
-"00“....whatever…”",
-"00In the time it took for her to utter this one word, the class had already ended. You are packing up your things to go when she suddenly grabs your sleeve.",
+"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","00You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
 "00“have you ever…heard of…leetcode?”",
 "00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
-"00You see Taylor’s eyes light up. She looks at you straight in the eyes for the first time today.",
-"00“Come to room 304 tonight at 8. I’ll be waiting.”",
+"00You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
+"00“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
 "00And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
 "00",
 "00Elliot: “Hi, (player-name). So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.” And with that, Elliot leaves.",
@@ -64,6 +53,24 @@ var choice31 = ["00You decide you might as well take the opportunity to return T
 var choice32 = ["00You decide Film Appreciation Club sounds indeed like a ‘hella hella chill’ plan, and you decide against Taylor’s strange request as you leave the room."];
 txt = txtArray[0];
 
+var FilmAppreciationClub = ["00You walk into the classroom, and to your surprise, it’s completely empty. You wonder if you’ve gone to the right room, but you spot Elliot standing near the front of the room."
+,"e1Yo, you made it. Knew you’d come. Welcome to the Byte University Film Appreciation Club.", "00You look around at the desolate classroom and notice a smirk on Elliot’s face.", "00“Uh…so I’m the first one here. I thought I’d be late,” you say."
+, "e2“Well, uh it’s actually just you. There were some others. But they didn’t respect the art. Not like I do. So, as president, I kicked em out. Couldn’t handle it.”", "e1 “But hey, you’re here. So, welcome to Film Appreciation Club.”"
+,"00“Uh, ok. So what’s the plan, O God of Film?” you say.", "e3“Well, since all the members of the club are here, I guess we can begin. Let’s start with something basic. You literally can’t get this wrong. What’s your favorite film?”"];
+
+var choicesFilm1 = ["Pulp Fiction", "Interstellar", "The Social Network", "Despicable Me"];
+var choicesFilm11 = ["00You think for a moment. “Well, this movie’s pretty underground and stuff, but have you ever seen Pulp Fiction?”", "00Elliot’s face immediately lights up in unbelievable joy."
+, "00“You…your favorite movie is Pulp Fiction. This is unbelievable. You might…you might even have taste!”", "e3“Alright, this one should be a breeze for you. We’re going straight into movie analysis, so.”"];
+var choicesFilm12 = ["00“Hmm…” You find yourself thinking for fairly long. “Oh, I got it. Interstellar! With Matthew Mcconaughey. Man, that movie is so good.”", "00Elliot seems to think about this for a moment, then nods his head."
+,"00“Well, that’s acceptable, I guess. Certainly better choices. But you’ll learn soon.", "00 “Alright, well, we might as well just get into movie analysis.”"];
+var choicesFilm13 = ["00“Hmmm…” You think for a good moment. “Ah, I know. Have you ever seen The Social Network? That might be my favorite. Jesse Eisenberg is so good, man.”", "00Elliot looks a little surprised for a moment."
+, "e3“Oh. The Social Network? Well, I guess it kinda works? For a beginner.  You certainly have a lot to learn, but we’ll get to that soon enough. Why don’t we just get straight into movie analysis?”"];
+var choicesFilm14 = ["00“Hmm…” You think for a moment. “Well, I really like, uh, Despicable Me. The minions are just so cute in that movie.”", "00Immediately, disgust comes into Elliot’s eyes.",
+"e4“How…how did you get it wrong? That’s literally–what? Who are you?”", "00“Dude, I just think the minions are cute. You’re telling me you didn’t think the minions were cute?” you ask him."
+, "00Elliot’s look of disgust morphs into a look of resigned disappointment.", "e2“That’s not the–whatever. Ok. Listen. We’re gonna have to fix this later. But let’s just go into movie analysis. This one’s even easier."];
+
+var afterChoicesFilm1 = ["e4“You’ve seen The Wolf of Wall Street, right? Cmon.”"];
+
 var choiceNumber = 0;
 
 var choicesMade = 0;
@@ -71,7 +78,6 @@ var choicesMade = 0;
 var choiceIndex = 0;
 
 document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-
 var index = 1;
 
 
@@ -117,7 +123,7 @@ function startAnimation() {
                     if (i < 2) {
                         
                         if (txt.charAt(i) == 'e' || txt.charAt(i) == 'E') {
-                            
+                            document.getElementById("SpriteRight").style.display = 'flex';
                             i++;
                             switch(txt.charAt(i)) {
                                 case '0': 
@@ -156,7 +162,7 @@ function startAnimation() {
                                 speaker.innerHTML = "Elliot";
                             }
                         } else if (txt.charAt(i) == 't' || txt.charAt(i) == 'T') {
-                            
+                            document.getElementById("SpriteRight").style.display = 'flex';
                             i++;
                             switch(txt.charAt(i)) {
                                 case '0': 
@@ -203,6 +209,9 @@ function startAnimation() {
                                 speaker.innerHTML = "You";
                             } else if (txt.charAt(i) == '2') {
                                 speaker.innerHTML = "Byte";
+                            } else if (txt.charAt(i) == '/') {
+                                document.getElementById("SpriteRight").style.display = 'none';
+                                speaker.innerHTML = "";
                             }
                             i += 2;
                         }
@@ -282,83 +291,64 @@ function makeChoice() {
 }
 
 function chosen(a) {
+    document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+    document.getElementById("SpriteRight").style.filter = "blur(0px)";
+    document.getElementById("SpriteLeft").style.filter = "blur(0px)";
+    document.getElementById("SpriteRight").style.filter = "blur(0px)";
+    option1.style.display = "none";
+    option2.style.display = "none";
+    option3.style.display = "none";
+    option4.style.display = "none";
     if(choicesMade == 0) {
         switch(a) {
             case 1:
-            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-            document.getElementById("SpriteRight").style.filter = "blur(0px)";
-            option1.style.display = "none";
-            option2.style.display = "none";
-            option3.style.display = "none";
-            option4.style.display = "none";
-            txtArray = choice11.concat(afterChoice1);
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
+                txtArray = choice11.concat(afterChoice1);
             break;
             case 2:
-            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-            document.getElementById("SpriteRight").style.filter = "blur(0px)";
-            option1.style.display = "none";
-            option2.style.display = "none";
-            option3.style.display = "none";
-            option4.style.display = "none";
-            txtArray = choice12.concat(afterChoice1);
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
+                txtArray = choice12.concat(afterChoice1);
             break;
         }
         choices = choices2;
     } else if (choicesMade == 1) {
         switch(a) {
             case 1:
-            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-            document.getElementById("SpriteRight").style.filter = "blur(0px)";
-            option1.style.display = "none";
-            option2.style.display = "none";
-            option3.style.display = "none";
-            option4.style.display = "none";
-            txtArray = choice21.concat(afterChoice2);
+                txtArray = choice21.concat(afterChoice2);
             break;
             case 2:
-            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-            document.getElementById("SpriteRight").style.filter = "blur(0px)";
-            option1.style.display = "none";
-            option2.style.display = "none";
-            option3.style.display = "none";
-            option4.style.display = "none";
-            txtArray = choice22.concat(afterChoice2);
+                txtArray = choice22.concat(afterChoice2);
             break;
         }
         choices = choices3;
     } else if (choicesMade == 2) {
         switch(a) {
             case 1:
-            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-            document.getElementById("SpriteRight").style.filter = "blur(0px)";
-            option1.style.display = "none";
-            option2.style.display = "none";
-            option3.style.display = "none";
-            option4.style.display = "none";
-            txtArray = choice31;
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
-            break;
+                path = 1;
+                txtArray = choice31;
+                break;
             case 2:
-            document.getElementById("SpriteLeft").style.filter = "blur(0px)";
-            document.getElementById("SpriteRight").style.filter = "blur(0px)";
-            option1.style.display = "none";
-            option2.style.display = "none";
-            option3.style.display = "none";
-            option4.style.display = "none";
-            txtArray = choice32;
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
-            break;
+                path = 2
+                txtArray = choice32.concat(FilmAppreciationClub);
+                break;
         }
+        choices = choicesFilm1;
+    } else if (choicesMade == 3) {
+        if (path == 2) {
+            switch(a) {
+                case 1: 
+                    txtArray = choicesFilm11.concat(afterChoicesFilm1);
+                    break;
+                case 2:
+                    txtArray = choicesFilm12.concat(afterChoicesFilm1);
+                    break;
+                case 3:
+                    txtArray = choicesFilm13.concat(afterChoicesFilm1);
+                    break;
+                case 4:
+                    txtArray = choicesFilm14.concat(afterChoicesFilm1);
+                    break;
+            }
+
+        } else {}
     }
     choicesMade++;
     txt = txtArray[0];
