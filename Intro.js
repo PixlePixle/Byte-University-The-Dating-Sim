@@ -14,7 +14,7 @@ var txtArray = ["00You crack your eyes open. The time on your clock reads 7:25."
 "00You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door.",
 "00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early and make a good impression on your teachers, but now you have three minutes to get to school before the late bell rings.",
 1, "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
-"<i>BAM!</i>",
+"00<i>BAM!</i>",
 "T3You slam full speed into a girl, and you see several books spill from her arms. You notice the title of one of the textbooks:",
 "00<i>“Introduction to Natural Language Processing and Machine Learning Techniques, by Dr.Byte.”</i>",
 "00Wait a minute, that’s a class you’ll be taking this semester! This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her and caused her to drop all of her books."];
@@ -75,7 +75,7 @@ var choicesFilm21 = ["E0Elliot seems relieved at this answer.","E0'Oh thank God.
 var choicesFilm22 = ["E5Elliot looks absolutely frustrated with you.", "e5“Ah. Well. I honestly don’t–I don’t even know if we can fix you at this point.”"];
 var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to the empty classroom.", "E0“Well. It’s uh, it’s tradition that new members have to watch a movie with the rest of the club. But since it's just you…”"
 , "00He seems to ponder an idea for a second, then nod, as if coming to a solution.", "e0“Yup, we can make an exception for you. Unless, well. Unless you wanted to watch a movie. With me. Probably on the weekend? They’re showing some good stuff. Well, whatever. We can talk about this later.”"
-, "E3Elliot leaves the room, but he stops in the doorway, swings around on one heel, and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
+, "E0Elliot leaves the room, but he stops in the doorway, swings around on one heel, and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
 , "//And with that, Elliot leaves the first meeting of Film Appreciation Club."];
 
 var choiceNumber = 0;
