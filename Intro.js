@@ -9,13 +9,13 @@ var option3 = document.getElementById("Option3");
 var option4 = document.getElementById("Option4");
 var speaker = document.getElementById("nameHeader");
 var path = 0;
-var txtArray = ["t2You crack your eyes open. The time on your clock reads 7:25.",
+var txtArray = ["00You crack your eyes open. The time on your clock reads 7:25.",
 "//OH CRAP!", 
 "00You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door.",
 "00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early and make a good impression on your teachers, but now you have three minutes to get to school before the late bell rings.",
-"00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
-"T2<i>BAM!</i>",
-"T2You slam full speed into a girl, and you see several books spill from her arms. You notice the title of one of the textbooks:",
+1, "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
+"<i>BAM!</i>",
+"T3You slam full speed into a girl, and you see several books spill from her arms. You notice the title of one of the textbooks:",
 "00<i>“Introduction to Natural Language Processing and Machine Learning Techniques, by Dr.Byte.”</i>",
 "00Wait a minute, that’s a class you’ll be taking this semester! This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her and caused her to drop all of her books."];
 
@@ -24,22 +24,22 @@ var choices1 = ["“I’m so sorry! Let me help you with that.”", "“Watch wh
 
 var metTaylor = true;
 
-var choice11 = ["00You bend down and try to help her with her books, but she lets out a high-pitched yelp and kicks you in the side. You look at her, bewildered, before deciding to just leave and begin running to school again."];
-var choice12 = ["00You see her face scrunch up as a tear rolls down her face before you hear her making tiny little sobs. She bends down to pick her things up, shielding her face from you, and you begin running to school again."];
+var choice11 = ["T2You bend down and try to help her with her books, but she lets out a high-pitched yelp and kicks you in the side. You look at her, bewildered, before deciding to just leave and begin running to school again."];
+var choice12 = ["T2You see her face scrunch up as a tear rolls down her face before you hear her making tiny little sobs. She bends down to pick her things up, shielding her face from you, and you begin running to school again."];
 
 var choices = choices1;
 
-var afterChoice1 = ["enYou run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead. Every single seat next to him is empty.",
-"11You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
-"e1“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
+var afterChoice1 = [2, "//You run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead. Every single seat next to him is empty.",
+"//You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
+"e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
 var choices2 = ["Ellie, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."]
-var choice21 = ["e2Oh yea, you’re….uh…(player-name), right?"];
-var choice22 = ["e2Oh. Weird. Well, whatever."];
+var choice21 = ["00Oh yea, you’re….uh…(player-name), right?"];
+var choice22 = ["00Oh. Weird. Well, whatever."];
 
 var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
-"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","00You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
-"00“have you ever…heard of…leetcode?”",
+"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
+"t5“have you ever…heard of…leetcode?”",
 "00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
 "00You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
 "00“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
@@ -78,9 +78,10 @@ var choicesMade = 0;
 var choiceIndex = 0;
 
 document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
+speaker.innerHTML = "";
 var index = 1;
 
-
+ 
 var first = 0;
 var italicized = false;
 var wakeup = false;
@@ -91,27 +92,16 @@ function startAnimation() {
         document.getElementById("body").style.transition = "0";
         wakeup = true;
     }
-    if (first == 0 && (index == 5 || index == 6 || index == 8) && choicesMade == 0) {
-        if (index == 5) {
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-            document.getElementById("body").style.transition = "0";
-        } else if (index == 6) {
-            document.getElementById("body").style.backgroundImage = "url('imgs/backgrounds/pink thingy.jpg')";
-            document.getElementById("body").style.transition = "1s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,0)";
-            document.getElementById("body").style.transition = "0";
-        } else if (index == 8) {
-            document.getElementById("SpriteRight").style.display = "flex";
+    if (typeof txt == 'number') {
+        switch(txt) {
+            case 1:
+                changeBack("url('imgs/backgrounds/park.png')");
+                break;
+            case 2:
+                changeBack("url('imgs/backgrounds/classroom light.png')");
+                break;
         }
-    }
-    if (first == 0 && index == 2 && choicesMade == 1) {
-        if (index == 2) {
-            document.getElementById("body").style.backgroundImage = "url('imgs/backgrounds/bedroom_morning_background fixed.png')";
-            document.getElementById("body").style.transition = "1.5s";
-            document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,0)";
-            document.getElementById("body").style.transition = "0";
-        }
+        stopAnimation();
     }
     if (first == 0) {
         first = 1;
@@ -119,7 +109,6 @@ function startAnimation() {
         loop = setInterval(
             function textAnimation() {
                 if (i < txt.length) {
-
                     if (i < 2) {
                         
                         if (txt.charAt(i) == 'e' || txt.charAt(i) == 'E') {
@@ -145,7 +134,7 @@ function startAnimation() {
                                 changeImage('imgs/characters/Elliot/elliot worried.png');
                                 break;
                                 case '6': 
-                                changeImage('imgs/characters/Elliot/');
+                                changeImage('imgs/characters/npc ms byte.png');
                                 break;
                                 case '7': 
                                 changeImage('imgs/characters/Elliot/');
@@ -209,6 +198,7 @@ function startAnimation() {
                                 speaker.innerHTML = "You";
                             } else if (txt.charAt(i) == '2') {
                                 speaker.innerHTML = "Byte";
+                                changeImage('imgs/characters/npc ms byte.png');
                             } else if (txt.charAt(i) == '/') {
                                 document.getElementById("SpriteRight").style.display = 'none';
                                 speaker.innerHTML = "";
@@ -245,8 +235,9 @@ function startAnimation() {
 function stopAnimation() {
     clearInterval(loop);
     i = 0;
-
-    textBox.innerHTML = txt.substring(2);
+    if (typeof txt != 'number') {
+        textBox.innerHTML = txt.substring(2);
+    }
     italicized = false;
     first = 0;
     if (index < txtArray.length) {
@@ -358,6 +349,13 @@ function chosen(a) {
 
 function changeImage(a) {
     document.getElementById("SpriteRight").src=a;
+}
+
+function changeBack(a) {
+    document.getElementById("body").style.backgroundImage = a;
+    document.getElementById("body").style.transition = "1s";
+    document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,0)";
+    document.getElementById("body").style.transition = "0";
 }
 
 /* IDK JUST RUN CODE DOWN HERE WOOO! */
