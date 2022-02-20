@@ -17,7 +17,7 @@ Due to our lack of background, this project was definitely difficult to start. T
 <br>
 
 ### Credits:
-- Azeez (@sentientrock): Script/Code
 - Peter (@PixlePixle): Code
 - Kaytie (@lin-kaytie): Artwork
+- Azeez (@sentientrock): Script/Code
 - Andy: Script
