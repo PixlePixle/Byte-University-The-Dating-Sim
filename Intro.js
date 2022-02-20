@@ -33,7 +33,7 @@ var afterChoice1 = [2, "//You run into the classroom a second before the late be
 "00You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
-var choices2 = ["Ellie, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."]
+var choices2 = ["Ellie, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
 var choice21 = ["00Oh yea, I remember you! From fourth grade, right?"];
 var choice22 = ["00Oh. Weird. Well, whatever."];
 
@@ -73,7 +73,7 @@ var afterChoicesFilm1 = ["e4“You’ve seen The Wolf of Wall Street, right? Cmo
 var choicesFilm2 = ["Of course I have!", "What's that? Is that an anime or something?"];
 var choicesFilm21 = ["E0Elliot seems relieved at this answer.","E0'Oh thank God. You're redeemable after all. Maybe it isn't too late for you."];
 var choicesFilm22 = ["E5Elliot looks absolutely frustrated with you.", "e5“Ah. Well. I honestly don’t–I don’t even know if we can fix you at this point.”"];
-var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to the empty classroom.", "E0“Well. It’s uh, it’s tradition that new members have to watch a movie with the rest of the club. But since it's just you…”"
+var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to the empty classroom.", "e0“Well. It’s uh, it’s tradition that new members have to watch a movie with the rest of the club. But since it's just you…”"
 , "00He seems to ponder an idea for a second, then nod, as if coming to a solution.", "e0“Yup, we can make an exception for you. Unless, well. Unless you wanted to watch a movie. With me. Probably on the weekend? They’re showing some good stuff. Well, whatever. We can talk about this later.”"
 , "E0Elliot leaves the room, but he stops in the doorway, swings around on one heel, and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
 , "//And with that, Elliot leaves the first meeting of Film Appreciation Club."];
@@ -81,7 +81,7 @@ var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to 
 var CodeAppreciationClub = [3,"//You walk into room 304, holding Taylor’s textbook to your chest. The room is dark, save for the light from a MacBook at the front of the room. Taylor sits in front of it, incredibly focused on the screen with an intensity that seems nothing like the girl you met earlier today.",
 "T4“Hi,” you call out to her.","T3She looks at you and immediately blushes, looking at the ground.", "t5“Hi. Welcome to…the very first meeting…of LeetCode Appreciation Club.”",
 "00Her voice is so quiet, you can barely make out the words. <i>LeetCode Appreciation Club?</i> You find yourself wondering whether coming here was really the better decision.", "00Without looking up, she pats the seat next to her. You make your way over and sit down, pulling your chair close enough to see her screen."
-, "T5You hand her the forgotten textbook from earlier today. “You forgot this,” you say. She looks up and grabs the textbook from your hands quickly.", "t3 “.......thanks.”", "t5“Anyways…what do you think about LeetCode?”"]
+, "T5You hand her the forgotten textbook from earlier today. “You forgot this,” you say. She looks up and grabs the textbook from your hands quickly.", "t3 “.......thanks.”", "t5“Anyways…what do you think about LeetCode?”"];
 
 var choicesCode1 = ["I love it! LeetCode is probably the best thing ever made!!!!!!", "Ehhh. Not my favorite thing in the world."];
 var choicesCode11 = ["t0“Really?! This is the first time…I’ve met anyone else…besides me…”"];
@@ -99,7 +99,7 @@ var afterChoicesCode2 = ["t4“Anyways, so the idea here is you have an array, w
 "t0“Well…ok. That was a lot! I guess we can…we can conclude the first meeting of the LeetCode Appreciation Club!”", "t7“That was…fun! It was fun! Let’s do it again sometime, okay?”",
 "//And with that, she quickly shoves her laptop in her bag and runs out of the room."];
 
-endChoice = ["Thanks for playing!"]
+endChoice = ["Thanks for playing!"];
 
 var choiceNumber = 0;
 
@@ -351,7 +351,7 @@ function chosen(a) {
                 choices = choicesCode1;
                 break;
             case 2:
-                path = 2
+                path = 2;
                 txtArray = choice32.concat(FilmAppreciationClub);
                 choices = choicesFilm1;
                 break;
@@ -430,7 +430,7 @@ function endGame() {
     document.getElementById("body").style.transition = "1s";
     document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
     document.getElementById("body").style.transition = "0";
-    textBox.innerHTML = "Thanks for playing through this small demo of our game! We hope to be able to continue working on it even after the hackathon :)"
+    textBox.innerHTML = "Thanks for playing through this small demo of our game! We hope to be able to continue working on it even after the hackathon :)";
 }
 
 /* IDK JUST RUN CODE DOWN HERE WOOO! */
