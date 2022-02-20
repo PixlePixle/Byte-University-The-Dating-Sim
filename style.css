@@ -13,6 +13,9 @@ body {
     position: relative;
     overflow: hidden;
 
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility:    hidden;
+    -ms-backface-visibility:     hidden;
 }
 
 .Sprites {
