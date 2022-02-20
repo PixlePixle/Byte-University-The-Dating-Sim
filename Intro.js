@@ -143,7 +143,6 @@ function startAnimation() {
                     if (i < 2) {
                         
                         if (txt.charAt(i) == 'e' || txt.charAt(i) == 'E') {
-                            document.getElementById("SpriteRight").style.display = 'flex';
                             i++;
                             switch(txt.charAt(i)) {
                                 case '0': 
@@ -177,12 +176,12 @@ function startAnimation() {
                                 changeImage('imgs/characters/Elliot/');
                                 break;
                             }
+                            document.getElementById("SpriteRight").style.display = 'flex';
                             i++;
                             if (txt.charAt(i-2) != 'E') {
                                 speaker.innerHTML = "Elliot";
                             }
                         } else if (txt.charAt(i) == 't' || txt.charAt(i) == 'T') {
-                            document.getElementById("SpriteRight").style.display = 'flex';
                             i++;
                             switch(txt.charAt(i)) {
                                 case '0': 
@@ -216,6 +215,7 @@ function startAnimation() {
                                 changeImage('imgs/characters/Taylor/blood.png');
                                 break;
                             }
+                            document.getElementById("SpriteRight").style.display = 'flex'
                             i++;
                             if (metTaylor && txt.charAt(i-2) != 'T') {
                                 speaker.innerHTML = "Taylor";
