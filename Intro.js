@@ -108,7 +108,6 @@ var choicesMade = 0;
 var choiceIndex = 0;
 
 document.getElementById("body").style.boxShadow = "0 0 0 10000px rgba(0,0,0,1)";
-speaker.innerHTML = "";
 var index = 1;
 
  

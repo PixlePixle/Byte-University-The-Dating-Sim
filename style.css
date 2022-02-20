@@ -137,10 +137,11 @@ body {
 .BottomBox .Overlay #nameHeader {
     color: white;
     -webkit-text-fill-color: white;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
     line-height: 0vh;
     font-family: 'Lilita One', cursive;
+    font-size: 30px;
 }
 
 .BottomBox .Overlay p {
