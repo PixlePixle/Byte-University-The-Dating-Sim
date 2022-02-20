@@ -39,10 +39,10 @@ var choice22 = ["00Oh. Weird. Well, whatever."];
 
 var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
 "20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
-"t5“have you ever…heard of…leetcode?”",
+"T5“have you ever…heard of…leetcode?”",
 "00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
-"t7You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
-"00“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
+"T7You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
+"t7“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
 "//And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
 "e0Elliot: “Hi. So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.” And with that, Elliot leaves.",
 "00Well, now you have a decision to make. You know you don’t have plans tonight, so you might as well go to one. But which one?"];
@@ -58,22 +58,25 @@ var FilmAppreciationClub = [3,"00You walk into the classroom, and to your surpri
 ,"00“Uh, ok. So what’s the plan, O God of Film?” you say.", "e3“Well, since all the members of the club are here, I guess we can begin. Let’s start with something basic. You literally can’t get this wrong. What’s your favorite film?”"];
 
 var choicesFilm1 = ["Pulp Fiction", "Interstellar", "The Social Network", "Despicable Me"];
-var choicesFilm11 = ["00You think for a moment. “Well, this movie’s pretty underground and stuff, but have you ever seen Pulp Fiction?”", "00Elliot’s face immediately lights up in unbelievable joy."
-, "00“You…your favorite movie is Pulp Fiction. This is unbelievable. You might…you might even have taste!”", "e3“Alright, this one should be a breeze for you. We’re going straight into movie analysis, so.”"];
-var choicesFilm12 = ["00“Hmm…” You find yourself thinking for fairly long. “Oh, I got it. Interstellar! With Matthew Mcconaughey. Man, that movie is so good.”", "00Elliot seems to think about this for a moment, then nods his head."
+var choicesFilm11 = ["E0You think for a moment. “Well, this movie’s pretty underground and stuff, but have you ever seen Pulp Fiction?”", "E1Elliot’s face immediately lights up in unbelievable joy."
+, "00“You…your favorite movie is Pulp Fiction. This is unbelievable. You might…you might even have taste!”", "e0“Alright, this one should be a breeze for you. We’re going straight into movie analysis, so.”"];
+var choicesFilm12 = ["E0“Hmm…” You find yourself thinking for fairly long. “Oh, I got it. Interstellar! With Matthew Mcconaughey. Man, that movie is so good.”", "00Elliot seems to think about this for a moment, then nods his head."
 ,"00“Well, that’s acceptable, I guess. Certainly better choices. But you’ll learn soon.", "00 “Alright, well, we might as well just get into movie analysis.”"];
-var choicesFilm13 = ["00“Hmmm…” You think for a good moment. “Ah, I know. Have you ever seen The Social Network? That might be my favorite. Jesse Eisenberg is so good, man.”", "00Elliot looks a little surprised for a moment."
+var choicesFilm13 = ["E0“Hmmm…” You think for a good moment. “Ah, I know. Have you ever seen The Social Network? That might be my favorite. Jesse Eisenberg is so good, man.”", "00Elliot looks a little surprised for a moment."
 , "e3“Oh. The Social Network? Well, I guess it kinda works? For a beginner.  You certainly have a lot to learn, but we’ll get to that soon enough. Why don’t we just get straight into movie analysis?”"];
-var choicesFilm14 = ["00“Hmm…” You think for a moment. “Well, I really like, uh, Despicable Me. The minions are just so cute in that movie.”", "00Immediately, disgust comes into Elliot’s eyes.",
+var choicesFilm14 = ["E0“Hmm…” You think for a moment. “Well, I really like, uh, Despicable Me. The minions are just so cute in that movie.”", "00Immediately, disgust comes into Elliot’s eyes.",
 "e4“How…how did you get it wrong? That’s literally–what? Who are you?”", "00“Dude, I just think the minions are cute. You’re telling me you didn’t think the minions were cute?” you ask him."
 , "00Elliot’s look of disgust morphs into a look of resigned disappointment.", "e2“That’s not the–whatever. Ok. Listen. We’re gonna have to fix this later. But let’s just go into movie analysis. This one’s even easier."];
 
 var afterChoicesFilm1 = ["e4“You’ve seen The Wolf of Wall Street, right? Cmon.”"];
 
 var choicesFilm2 = ["Of course I have!", "What's that? Is that an anime or something?"];
-var choicesFilm21 = ["e0Elliot seems relieved at this answer.","E0'Oh thank God. You're redeemable after all. Maybe it isn't too late for you."];
-var choicesFilm22 = ["e5Elliot looks absolutely frustrated with you.", "E0“Ah. Well. I honestly don’t–I don’t even know if we can fix you at this point.”"];
-
+var choicesFilm21 = ["E0Elliot seems relieved at this answer.","E0'Oh thank God. You're redeemable after all. Maybe it isn't too late for you."];
+var choicesFilm22 = ["E5Elliot looks absolutely frustrated with you.", "e5“Ah. Well. I honestly don’t–I don’t even know if we can fix you at this point.”"];
+var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to the empty classroom.", "E0“Well. It’s uh, it’s tradition that new members have to watch a movie with the rest of the club. But since it's just you…”"
+, "00He seems to ponder an idea for a second, then nod, as if coming to a solution.", "e0“Yup, we can make an exception for you. Unless, well. Unless you wanted to watch a movie. With me. Probably on the weekend? They’re showing some good stuff. Well, whatever. We can talk about this later.”"
+, "E3Elliot leaves the room, but he stops in the doorway, swings around on one heel, and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
+, "//And with that, Elliot leaves the first meeting of Film Appreciation Club."];
 
 var choiceNumber = 0;
 
@@ -344,8 +347,19 @@ function chosen(a) {
                     txtArray = choicesFilm14.concat(afterChoicesFilm1);
                     break;
             }
-
+            choices = choicesFilm2;
         } else {}
+    } else if (choicesMade == 4) {
+        if (path == 2) {
+            switch(a) {
+                case 1:
+                    txtArray = choicesFilm21.concat(afterChoicesFilm2);
+                    break;
+                case 2:
+                    txtArray = choicesFilm22.concat(afterChoicesFilm2);
+                    break;
+            }
+        }
     }
     choicesMade++;
     txt = txtArray[0];
