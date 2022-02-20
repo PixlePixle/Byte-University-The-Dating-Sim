@@ -1,4 +1,4 @@
-![Byte University: The Dating Sim logo](imgs/assets/logo.png)
+![Byte University: The Dating Sim logo](imgs/assets/unknown.png)
 
  ---
 
