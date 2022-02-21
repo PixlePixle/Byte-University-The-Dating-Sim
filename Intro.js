@@ -24,7 +24,7 @@ var choices1 = ["“I’m so sorry! Let me help you with those.”", "“Watch w
 var metTaylor = true;
 
 var choice11 = ["T2You bend down and try to help her with her books, but she lets out a high-pitched yelp and kicks you in the side. You look at her, bewildered, before deciding to just leave and begin running to school again."];
-var choice12 = ["T2You see her face scrunch up as a tear rolls down her face before you hear her making tiny little sobs. She bends down to pick her things up, shielding her face from you, and you begin running to school again."];
+var choice12 = ["T2You see her face scrunch up and a tear roll down her face. She bends down to pick her things up, shielding her face from you, and you begin running to school again."];
 
 var choices = choices1;
 
