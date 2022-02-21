@@ -54,7 +54,7 @@ txt = txtArray[0];
 var FilmAppreciationClub = [3,"00You walk into the classroom, and to your surprise, it’s completely empty. You wonder if you’ve gone to the right room, but you spot Elliot standing near the front of the room."
 ,"e1Yo, you made it. Knew you’d come. Welcome to the Byte University Film Appreciation Club.", "00You look around at the desolate classroom and notice a smirk on Elliot’s face.", "00“Uh…so I’m the first one here. I thought I’d be late,” you say."
 , "e2“Well, uh it’s actually just you. There were some others. But they didn’t respect the art. Not like I do. So, as president, I kicked em out. Couldn’t handle it.”", "e1 “But hey, you’re here. So, welcome to Film Appreciation Club.”"
-,"00“Uh, ok. So what’s the plan, O God of Film?” you say.", "e3“Well, since all the members of the club are here, I guess we can begin. Let’s start with something basic. You literally can’t get this wrong. What’s your favorite film?”"];
+,"00“Uh, ok. So what’s the plan>” you say.", "e3“Well, since all the members of the club are here, I guess we can begin. Let’s start with something basic. You literally can’t get this wrong. What’s your favorite film?”"];
 
 var choicesFilm1 = ["Pulp Fiction", "Interstellar", "The Social Network", "Despicable Me"];
 var choicesFilm11 = ["E0You think for a moment. “Well, this movie’s pretty underground and stuff, but have you ever seen Pulp Fiction?”", "E1Elliot’s face immediately lights up in unbelievable joy."
