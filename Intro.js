@@ -16,7 +16,7 @@ var txtArray = ["00BEEP. BEEP. BEEP. BEEP.","00You crack your eyes open. The tim
 1, "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
 "00<i>BAM!</i>",
 "T3You slam full speed into a girl, and several books spill from her arms. On her bag, she has a patch from your university.",
-"00This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her."];
+"00You realize she must’ve been late for class this morning as well. And now, you’ve crashed into her."];
 
 
 var choices1 = ["“I’m so sorry! Let me help you with those.”", "“Watch where you’re going next time, you punk.”"];
