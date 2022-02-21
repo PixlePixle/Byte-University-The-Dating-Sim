@@ -12,12 +12,11 @@ var path = 0;
 var txtArray = ["00BEEP. BEEP. BEEP. BEEP.","00You crack your eyes open. The time on your clock reads 7:57.",
 "//OH CRAP!", 
 "00You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door.",
-"00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early and make a good impression on your teachers, but now you have three minutes to get to school before the late bell rings.",
+"00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early, but now you have three minutes to get to school before the late bell rings.",
 1, "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
 "00<i>BAM!</i>",
-"T3You slam full speed into a girl, and several books spill from her arms. You notice the title of one of the textbooks:",
-"00<i>“Introduction to Natural Language Processing and Machine Learning Techniques, by Dr.Byte.”</i>",
-"00Wait a minute, that’s a class you’ll be taking this semester! This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her and caused her to drop all of her books."];
+"T3You slam full speed into a girl, and several books spill from her arms. On her bag, she has a patch from your university.",
+"00This girl must go to the same university as you, and she must’ve been late for class this morning as well. And now, you’ve crashed into her."];
 
 
 var choices1 = ["“I’m so sorry! Let me help you with those.”", "“Watch where you’re going next time, you punk.”"];
@@ -29,21 +28,21 @@ var choice12 = ["T2You see her face scrunch up as a tear rolls down her face bef
 
 var choices = choices1;
 
-var afterChoice1 = [2, "//You run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead. Every single seat next to him is empty.",
+var afterChoice1 = [2, "//You run into the classroom a second before the late bell rings. You scan the room, looking for any familiar face, and to your surprise, you spot a childhood friend of yours, Elliot Bane Morehead.", "00Every single seat next to him is empty.",
 "00You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
-var choices2 = ["Ellie, we lived next to each other for 14 years!”", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
+var choices2 = ["Elliot, we lived next to each other for 14 years!”", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
 var choice21 = ["e0“Oh yea, I remember you! From fourth grade, right?”"];
-var choice22 = ["e0“Oh. Weird. Well, whatever."];
+var choice22 = ["e0“Oh. Weird. Well, whatever.”"];
 
-var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room. You assume this must be your professor.",
-"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice. When you wake up, the entire class has left, except for Elliot and the girl from this morning.","00You are packing up your things to go when the girl suddenly grabs your sleeve.",
-"t5“Wait. Have…you ever…heard of…LeetCode?”",
+var afterChoice2 = ["00Your exciting conversation is cut short by a stern-looking woman that slams the door loudly as she enters the room.",
+"20Welcome to Introduction to the English Language. I am your professor, Mrs.Byte. Today we will begin the semester by--","//You can't help but fall asleep to the sultry sound of your professor's voice.", "00When you wake up, the entire class has left, but standing besides you are Elliot and the girl you crashed into this morning. Suddenly, she grabs your sleeve.",
+"t5“Wait. I know we just met, and we didn't...get off to the best start, but..have…you ever…heard of…LeetCode?”",
 "00<i>Who hasn’t,</i> you think to yourself. “Uh, I guess so?” you say.",
-"T7You see the girl's eyes light up. She looks at you straight in the eyes for the first time today.",
-"t7“Come to room 304 tonight at 8. My name's Taylor. I’ll be waiting.”",
-"//And with that, she runs out of the classroom, forgetting one of her textbooks <i>(Introduction to Natural Language Processing)</i> on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
+"T7You see the girl's eyes light up. She looks at you straight in the eyes.",
+"t7“You do?! Then come to room 304 tonight at 8. My name is Taylor. I’ll be waiting.”",
+"//And with that, she runs out of the classroom, forgetting one of her textbooks on the desk. You are about to call out to her when Elliot walks in front of you and blocks your view.",
 "e0“Hi. So, you’re like new to this school, and stuff, and like, you should definitely come to the Film Appreciation Club tonight. I’ll be there, and it’s hella chill. Like, hella hella chill. 8 tonight in this classroom. I gotta go, but I better see you there.”",
 "//And with that, Elliot leaves.","00Well, now you have a decision to make. You know you don’t have plans tonight, so you might as well go to one. But which one?"];
 
@@ -73,9 +72,8 @@ var afterChoicesFilm1 = ["e4“You’ve seen The Wolf of Wall Street, right? Cmo
 var choicesFilm2 = ["Of course I have!", "What's that? Is that an anime or something?"];
 var choicesFilm21 = ["E0Elliot seems relieved at this answer.","E0'Oh thank God. You're redeemable after all. Maybe it isn't too late for you."];
 var choicesFilm22 = ["E5Elliot looks absolutely frustrated with you.", "e5“Ah. Well. I honestly don’t–I don’t even know if we can fix you at this point.”"];
-var afterChoicesFilm2 = ["00Elliot regains his composure and gestures around to the empty classroom.", "e0“Well. It’s uh, it’s tradition that new members have to watch a movie with the rest of the club. But since it's just you…”"
-, "00He seems to ponder an idea for a second, then nod, as if coming to a solution.", "e0“Yup, we can make an exception for you. Unless, well. Unless you wanted to watch a movie. With me. Probably on the weekend? They’re showing some good stuff. Well, whatever. We can talk about this later.”"
-, "E0Elliot leaves the room, but he stops in the doorway, swings around on one heel, and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
+var afterChoicesFilm2 = ["00Elliot regains his composure.", "e0“Well. It’s, uh, we can probably call the meeting there. You clearly have a lot to learn. I expect to see you next time.”"
+,"e0“But, uh, you know. There are some sick movies showing this weekend. If you'd wanna go. With me. For research. Because you have no idea what you're talking about. Evidently.","E0Elliot leaves the room, but he stops in the doorway and walks back to you.", "E0“You got a phone right? Sick. Alright. Here’s my number. Let me know if you wanna, I dunno, do anything. Or something.”"
 , "//And with that, Elliot leaves the first meeting of Film Appreciation Club."];
 
 var CodeAppreciationClub = [3,"//You walk into room 304, holding Taylor’s textbook to your chest. The room is dark, save for the light from a MacBook at the front of the room. Taylor sits in front of it, incredibly focused on the screen with an intensity that seems nothing like the girl you met earlier today.",
@@ -96,7 +94,7 @@ var choicesCode21 = ["T8Taylor seems surprised. She looks at you for a second, t
 var choicesCode22 = ["t7“Ah! That’s totally fine. I actually…It took me a while to get, too! Don’t worry, we can…we can do it together!”"];
 var afterChoicesCode2 = ["t4“Anyways, so the idea here is you have an array, which is basically just like a list of numbers...",
 "00Taylor continues on with the explanation, and you struggle to catch even basic details. Did she just say something about a hashbrown...?",
-"t0“Well…ok. That was a lot! I guess we can…we can conclude the first meeting of the LeetCode Appreciation Club!”", "t7“That was…fun! It was fun! Let’s do it again sometime, okay?”",
+"t0“…and anyways, that's why you use hashmaps here. Wow…ok. That was a lot! I guess we can…we can conclude the first meeting of the LeetCode Appreciation Club!”", "t7“That was…fun! It was fun! Let’s do it again sometime, okay?”",
 "//And with that, she quickly shoves her laptop in her bag and runs out of the room."];
 
 endChoice = ["Thanks for playing!"];
