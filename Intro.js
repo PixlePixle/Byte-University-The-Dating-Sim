@@ -10,7 +10,7 @@ var option4 = document.getElementById("Option4");
 var speaker = document.getElementById("nameHeader");
 var path = 0;
 var txtArray = ["00BEEP. BEEP. BEEP. BEEP.","00You crack your eyes open. The time on your clock reads 7:57.",
-"//OH CRAP!", 
+"//OH CRAP! You're late for your first day at your new school!", 
 "00You quickly run down, grab a piece of toast and shove it in your mouth, and run out the door.",
 "00Today’s the first day at your new school, Byte University for the Gifted. You had been hoping to get to school early, but now you have three minutes to get to school before the late bell rings.",
 1, "00You’re running to school, sprinting down the final stretch when you turn around a corner and– ",
