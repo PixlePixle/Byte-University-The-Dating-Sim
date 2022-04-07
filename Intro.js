@@ -32,7 +32,7 @@ var afterChoice1 = [2, "//You run into the classroom a second before the late be
 "00You slide into a seat to the left of him and tap his shoulder. “I didn’t know you went to this school!” you say.",
 "e0“What? Oh yea, I guess I do. Wait, do I know you from somewhere?”"];
 
-var choices2 = ["Elliot, we lived next to each other for 14 years!”", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
+var choices2 = ["Elliot, we lived next to each other for 14 years!", "Uhh, I don’t think so? To my knowledge, we’ve never met."];
 var choice21 = ["e0“Oh yea, I remember you! From fourth grade, right?”"];
 var choice22 = ["e0“Oh. Weird. Well, whatever.”"];
 
